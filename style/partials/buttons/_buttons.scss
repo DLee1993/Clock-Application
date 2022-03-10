@@ -1,0 +1,33 @@
+.btn-styling {
+    position: relative;
+    width: 146px;
+    height: 56px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: colorSet(dark-clr, faded-grey);
+    background-color: white;
+
+    & svg {
+        position: absolute;
+        right: 10px;
+        margin-left: 10px;
+        fill: #303030;
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        & svg {
+            fill: #30303088;
+            transition: all ease 0.4s;
+        }
+    }
+}
