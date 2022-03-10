@@ -235,7 +235,7 @@ h5 {
 }
 
 .daytime-bg {
-  background-image: url("./assets/desktop/bg-image-daytime.png");
+  background-image: url("../../../style/assets/desktop/bg-image-daytime.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
