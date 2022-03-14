@@ -5,90 +5,94 @@ main {
     width: 100%;
     height: 100vh;
     color: white;
-    padding: 40px 0 0 60px;
-    
-    @media screen and(min-width: 700px) {
-        padding: 50px 0 0 120px;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 
-    & .programmingQuotes {
-        width: fit-content;
+    //* Fluid Type can be used for paddings and margins
+    //* Please remember if you use smaller amounts of padding or margins i.e. 30px - 40px
+    //* The fluid type won't work as it is such a small amount of change it wont be noticed
+    //* Always use paddings and margins for screens up to 2560px to see the fluid type in action
 
-        & .flex-container {
+    @include fluidType(padding-left, 320px, 2560px, 30px, 200px);
+    @include fluidType(padding-right, 320px, 2560px, 30px, 200px);
+    @include fluidType(padding-top, 320px, 2560px, 30px, 50px);
+    @include fluidType(padding-bottom, 320px, 2560px, 30px, 50px);
+
+
+    & .programmingQuotes{
+        
+        & .flex-container{
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-
-            & .quoteText {
-                & p {
-                    @include fluidType(width, 320px, 1440px, 324px, 560px);
-                }
-            }
-
-            & svg {
-                margin: 5px 0 0 20px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        & .quote-author {
-            margin-top: 13px;
-        }
-    }
-
-    & .time-container {
-        width: fit-content;
-        margin-top: 90px;
-
-        & .welcome-section {
-            width: fit-content;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 20px;
-
-            & h4 {
-                margin-left: 28px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                & .tablet-only{
-                    display: none;
-
-                    @media screen and (min-width: 700px){
-                        display: block;
-                        
-                    }
-                }
-            }
-        }
-
-        & .time-display {
-            display: flex;
-            justify-content: start;
-            align-items: baseline;
             width: 100%;
+
+            & .quoteText{
+               @include fluidType(width, 320px, 1400px, 320px, 574px); 
+               margin-right: 10px;
+            }
+
+            & svg:hover{
+                cursor: pointer;
+            }
         }
     }
 
-    & .location-expandable {
+    & .time-container{
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: column;
-        width: 80vw;
-        height: 120px;
-        margin-top: 16px;
-        padding-left: 10px;
+
+        @include fluidType(height, 320px, 1400px, 135px, 220px);
+
+        & .welcome-section{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+
+            & svg{
+                margin-right: 15px;
+            }
+
+            & .tablet-only{
+                display: none;
+
+                @media screen and (min-width: 700px) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        & .time-display{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            & h2{
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    & .location-expandable{
+        width: 95%;
+        height: 110px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
 
         @media screen and (min-width: 700px) {
+            height: auto;
             flex-direction: row;
-            height: 80px;
-            
+            align-items: center;
         }
     }
 }

@@ -44,12 +44,12 @@ p {
 }
 
 h1 {
-  font-size: 75px;
+  font-size: 100px;
 }
 
 @media screen and (min-width: 320px) {
   h1 {
-    font-size: calc(12.27679vw + 35.71429px);
+    font-size: calc(11.16071vw + 64.28571px);
   }
 }
 
@@ -238,133 +238,20 @@ h5 {
   background-image: url("../style/assets/desktop/bg-image-daytime.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .nightTime-bg {
   background-image: url("../style/assets/desktop/bg-image-nighttime.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 main {
   width: 100%;
   height: 100vh;
   color: white;
-  padding: 40px 0 0 60px;
-}
-
-@media screen and (min-width: 700px) {
-  main {
-    padding: 50px 0 0 120px;
-  }
-}
-
-main .programmingQuotes {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-main .programmingQuotes .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-main .programmingQuotes .flex-container .quoteText p {
-  width: 324px;
-}
-
-@media screen and (min-width: 320px) {
-  main .programmingQuotes .flex-container .quoteText p {
-    width: calc(21.07143vw + 256.57143px);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  main .programmingQuotes .flex-container .quoteText p {
-    width: 560px;
-  }
-}
-
-main .programmingQuotes .flex-container svg {
-  margin: 5px 0 0 20px;
-}
-
-main .programmingQuotes .flex-container svg:hover {
-  cursor: pointer;
-}
-
-main .programmingQuotes .quote-author {
-  margin-top: 13px;
-}
-
-main .time-container {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 90px;
-}
-
-main .time-container .welcome-section {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 20px;
-}
-
-main .time-container .welcome-section h4 {
-  margin-left: 28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .time-container .welcome-section h4 .tablet-only {
-  display: none;
-}
-
-@media screen and (min-width: 700px) {
-  main .time-container .welcome-section h4 .tablet-only {
-    display: block;
-  }
-}
-
-main .time-container .time-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  width: 100%;
-}
-
-main .location-expandable {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,19 +265,215 @@ main .location-expandable {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80vw;
-  height: 120px;
-  margin-top: 16px;
-  padding-left: 10px;
+}
+
+main {
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  main {
+    padding-left: calc(7.58929vw + 5.71429px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    padding-left: 200px;
+  }
+}
+
+main {
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  main {
+    padding-right: calc(7.58929vw + 5.71429px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    padding-right: 200px;
+  }
+}
+
+main {
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  main {
+    padding-top: calc(0.89286vw + 27.14286px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    padding-top: 50px;
+  }
+}
+
+main {
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 320px) {
+  main {
+    padding-bottom: calc(0.89286vw + 27.14286px);
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  main {
+    padding-bottom: 50px;
+  }
+}
+
+main .programmingQuotes .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+main .programmingQuotes .flex-container .quoteText {
+  margin-right: 10px;
+}
+
+main .programmingQuotes .flex-container .quoteText {
+  width: 320px;
+}
+
+@media screen and (min-width: 320px) {
+  main .programmingQuotes .flex-container .quoteText {
+    width: calc(23.51852vw + 244.74074px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .programmingQuotes .flex-container .quoteText {
+    width: 574px;
+  }
+}
+
+main .programmingQuotes .flex-container svg:hover {
+  cursor: pointer;
+}
+
+main .time-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .time-container {
+  height: 135px;
+}
+
+@media screen and (min-width: 320px) {
+  main .time-container {
+    height: calc(7.87037vw + 109.81481px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main .time-container {
+    height: 220px;
+  }
+}
+
+main .time-container .welcome-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main .time-container .welcome-section svg {
+  margin-right: 15px;
+}
+
+main .time-container .welcome-section .tablet-only {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  main .time-container .welcome-section .tablet-only {
+    display: inline-block;
+  }
+}
+
+main .time-container .time-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .time-container .time-display h2 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+main .location-expandable {
+  width: 95%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (min-width: 700px) {
   main .location-expandable {
+    height: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -492,19 +575,6 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #999999;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  width: 0px;
 }
 /*# sourceMappingURL=main.css.map */
