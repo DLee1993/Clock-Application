@@ -10,7 +10,8 @@ main{
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
 
     & .programmingQuotes{
-        @include fluidType(width, 320px, 2560px, 300px, 700px);
+        width: auto;
+        max-width: 572px;
 
         & .quote-container{
             display: flex;
@@ -19,7 +20,7 @@ main{
             margin-bottom: 10px;
 
             & .quoteText{
-                width: 90%;
+                width: 80%;
             }
 
             & svg:hover{

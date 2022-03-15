@@ -288,19 +288,8 @@ main {
 }
 
 main .programmingQuotes {
-  width: 300px;
-}
-
-@media screen and (min-width: 320px) {
-  main .programmingQuotes {
-    width: calc(17.85714vw + 242.85714px);
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  main .programmingQuotes {
-    width: 700px;
-  }
+  width: auto;
+  max-width: 572px;
 }
 
 main .programmingQuotes .quote-container {
@@ -317,7 +306,7 @@ main .programmingQuotes .quote-container {
 }
 
 main .programmingQuotes .quote-container .quoteText {
-  width: 90%;
+  width: 80%;
 }
 
 main .programmingQuotes .quote-container svg:hover {
