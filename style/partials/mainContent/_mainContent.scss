@@ -9,6 +9,7 @@ main{
     @include fluidType(padding-left, 320px, 1400px, 10px, 80px);
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
 
+
     & .programmingQuotes{
         width: auto;
         max-width: 572px;
@@ -30,6 +31,35 @@ main{
 
         & .quote-author{
             font-weight: 700;
+        }
+    }
+
+    & .time-container{
+
+        & .welcome-section{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            & .timeOfDayIcon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & .welcomeText{
+                display: flex;
+                text-transform: uppercase;
+                margin-left: 10px;
+
+                & .tablet-only{
+                    display: none;
+
+                    @media screen and (min-width: 450px) {
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 }
