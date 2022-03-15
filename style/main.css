@@ -60,12 +60,12 @@ h1 {
 }
 
 h1 {
-  line-height: 100px;
+  line-height: 80px;
 }
 
 @media screen and (min-width: 320px) {
   h1 {
-    line-height: calc(6.69643vw + 78.57143px);
+    line-height: calc(7.58929vw + 55.71429px);
   }
 }
 
@@ -359,6 +359,40 @@ main .time-container .welcome-section .welcomeText .tablet-only {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+main .time-container .time-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .time-container .time-display .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .time-container .time-display .location {
+  font-weight: 700;
+  margin-left: 5px;
+  text-transform: uppercase;
 }
 
 .expandable-container {

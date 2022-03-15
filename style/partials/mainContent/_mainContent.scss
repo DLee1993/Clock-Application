@@ -1,7 +1,7 @@
 @import "../../typography/fontCalc";
 
 //* This is where the layout/styling for the main content is housed *
-main{
+main {
     width: 100%;
     height: 100vh;
     color: colorSet(light-clr, white);
@@ -9,56 +9,73 @@ main{
     @include fluidType(padding-left, 320px, 1400px, 10px, 80px);
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
 
-
-    & .programmingQuotes{
+    & .programmingQuotes {
         width: auto;
         max-width: 572px;
 
-        & .quote-container{
+        & .quote-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
 
-            & .quoteText{
+            & .quoteText {
                 width: 80%;
             }
 
-            & svg:hover{
+            & svg:hover {
                 cursor: pointer;
             }
         }
 
-        & .quote-author{
+        & .quote-author {
             font-weight: 700;
         }
     }
 
-    & .time-container{
-
-        & .welcome-section{
+    & .time-container {
+        & .welcome-section {
             display: flex;
             justify-content: flex-start;
             align-items: center;
 
-            & .timeOfDayIcon{
+            & .timeOfDayIcon {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 
-            & .welcomeText{
+            & .welcomeText {
                 display: flex;
                 text-transform: uppercase;
                 margin-left: 10px;
 
-                & .tablet-only{
+                & .tablet-only {
                     display: none;
 
                     @media screen and (min-width: 450px) {
                         display: flex;
                     }
                 }
+            }
+        }
+
+        & .time-display {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            flex-direction: column;
+
+            & .time {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+            }
+
+            & .location{
+                font-weight: 700;
+                margin-left: 5px;
+                text-transform: uppercase;
             }
         }
     }
