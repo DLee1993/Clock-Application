@@ -31,7 +31,7 @@ h1{
 	// The below code is used to access the calculations in fontCalc.scss and use the values provided to make the styling fluid
 
 	@include fluidType(font-size, 320px, 2560px, 100px, 350px); 
-	@include fluidType(line-height, 320px, 2560px, 100px, 250px); 
+	@include fluidType(line-height, 320px, 2560px, 80px, 250px); 
 
 	// You do not always need to change the max vw as once the max width has surpassed the element will stay at that max value
 	// This will allow the fluidity to only occur when the screen widths are smaller, in this case between 320px and 1440px
