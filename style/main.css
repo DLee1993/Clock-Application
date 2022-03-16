@@ -330,7 +330,7 @@ main .programmingQuotes .quote-author {
   font-weight: 700;
 }
 
-main .time-container .welcome-section {
+main .flex-container .time-container .welcome-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +342,7 @@ main .time-container .welcome-section {
           align-items: center;
 }
 
-main .time-container .welcome-section .timeOfDayIcon {
+main .flex-container .time-container .welcome-section .timeOfDayIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +354,7 @@ main .time-container .welcome-section .timeOfDayIcon {
           align-items: center;
 }
 
-main .time-container .welcome-section .welcomeText {
+main .flex-container .time-container .welcome-section .welcomeText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,19 +362,19 @@ main .time-container .welcome-section .welcomeText {
   margin-left: 10px;
 }
 
-main .time-container .welcome-section .welcomeText .tablet-only {
+main .flex-container .time-container .welcome-section .welcomeText .tablet-only {
   display: none;
 }
 
 @media screen and (min-width: 450px) {
-  main .time-container .welcome-section .welcomeText .tablet-only {
+  main .flex-container .time-container .welcome-section .welcomeText .tablet-only {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-main .time-container .time-display {
+main .flex-container .time-container .time-display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,7 +390,7 @@ main .time-container .time-display {
           flex-direction: column;
 }
 
-main .time-container .time-display .time {
+main .flex-container .time-container .time-display .time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,7 +402,7 @@ main .time-container .time-display .time {
           align-items: flex-end;
 }
 
-main .time-container .time-display .location {
+main .flex-container .time-container .time-display .location {
   font-weight: 700;
   margin-left: 5px;
   text-transform: uppercase;

@@ -37,49 +37,51 @@ main {
         }
     }
 
-    & .time-container {
-        & .welcome-section {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-
-            & .timeOfDayIcon {
+    & .flex-container {
+        & .time-container {
+            & .welcome-section {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
-            }
 
-            & .welcomeText {
-                display: flex;
-                text-transform: uppercase;
-                margin-left: 10px;
+                & .timeOfDayIcon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-                & .tablet-only {
-                    display: none;
+                & .welcomeText {
+                    display: flex;
+                    text-transform: uppercase;
+                    margin-left: 10px;
 
-                    @media screen and (min-width: 450px) {
-                        display: flex;
+                    & .tablet-only {
+                        display: none;
+
+                        @media screen and (min-width: 450px) {
+                            display: flex;
+                        }
                     }
                 }
             }
-        }
 
-        & .time-display {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            flex-direction: column;
-
-            & .time {
+            & .time-display {
                 display: flex;
-                justify-content: flex-start;
-                align-items: flex-end;
-            }
+                justify-content: flex-end;
+                align-items: flex-start;
+                flex-direction: column;
 
-            & .location{
-                font-weight: 700;
-                margin-left: 5px;
-                text-transform: uppercase;
+                & .time {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                }
+
+                & .location {
+                    font-weight: 700;
+                    margin-left: 5px;
+                    text-transform: uppercase;
+                }
             }
         }
     }
