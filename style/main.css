@@ -318,13 +318,37 @@ main .programmingQuotes .quote-author {
 }
 
 main .time-container .welcome-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+main .time-container .welcome-section .timeOfDayIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 main .time-container .welcome-section .welcomeText {
   margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .time-container .welcome-section .welcomeText .tablet-only {
@@ -335,6 +359,22 @@ main .time-container .welcome-section .welcomeText .tablet-only {
   main .time-container .welcome-section .welcomeText .tablet-only {
     display: inline-block;
   }
+}
+
+main .time-container .time-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .time-container .time-display .timezone {
+  text-transform: uppercase;
 }
 
 .expandable-container {

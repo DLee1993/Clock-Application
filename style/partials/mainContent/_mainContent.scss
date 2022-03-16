@@ -35,9 +35,20 @@ main {
 
     & .time-container{
         & .welcome-section{
+            width: fit-content;
             display: flex;
+
+            & .timeOfDayIcon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             & .welcomeText{
                 margin-left: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 & .tablet-only{
                     display: none;
 
@@ -45,6 +56,15 @@ main {
                         display: inline-block;
                     }
                 }
+            }
+        }
+        & .time-display{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            & .timezone{
+                text-transform: uppercase;
             }
         }
     }
