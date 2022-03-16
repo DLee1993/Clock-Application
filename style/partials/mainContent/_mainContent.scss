@@ -8,6 +8,10 @@ main {
     padding-top: 40px;
     @include fluidType(padding-left, 320px, 1400px, 10px, 80px);
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 
     & .programmingQuotes {
         width: auto;

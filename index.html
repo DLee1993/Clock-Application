@@ -32,25 +32,33 @@
                 </section>
                 <p class="quote-author">David Lee</p>
             </section>
-            <section class="time-container">
-                <section class="welcome-section">
-                    <section class="timeOfDayIcon"></section>
-                    <h2 class="welcomeText">
-                        Good Morning<span class="tablet-only"
-                            >, It's currently</span
-                        >
-                    </h2>
-                </section>
-                <section class="time-display">
-                    <section class="time">
-                        <h1>11:37</h1>
-                        <h2>BST</h2>
+            <section class="flex-container">
+                <section class="time-container">
+                    <section class="welcome-section">
+                        <section class="timeOfDayIcon"></section>
+                        <h2 class="welcomeText">
+                            Good Morning<span class="tablet-only"
+                                >, It's currently</span
+                            >
+                        </h2>
                     </section>
-                    <h2 class="location">
-                        in <span class="api-inputText">london, uk</span>
-                    </h2>
+                    <section class="time-display">
+                        <section class="time">
+                            <h1>11:37</h1>
+                            <h2>BST</h2>
+                        </section>
+                        <h2 class="location">
+                            in <span class="api-inputText">london, uk</span>
+                        </h2>
+                    </section>
                 </section>
+                <button class="toggle-expandable btn-styling">
+                    Test
+                    <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#303030" cx="20" cy="20" r="20"/><path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6"/></g></svg>
+                </button>
             </section>
         </main>
     </body>
 </html>
+
+<!--* Place the time section and the button into a parent container so you can use flex to push it to the bottom of the view port *-->
