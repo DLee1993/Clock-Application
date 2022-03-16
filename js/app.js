@@ -1,10 +1,10 @@
 const refreshIcon = document.querySelector(".refreshIcon"),
     timeOfDay = document.querySelector(".timeOfDayIcon"),
     mainContent = document.querySelector(".main-content");
-(btn = document.querySelector(".toggle-expandable")),
-    (btnFirstChild = btn.querySelector(".btn-text")),
-    (btnIcon = btn.querySelector("svg")),
-    (expandableContainer = document.querySelector(".expandable-container"));
+// (btn = document.querySelector(".toggle-expandable")),
+//     (btnFirstChild = btn.querySelector(".btn-text")),
+//     (btnIcon = btn.querySelector("svg")),
+//     (expandableContainer = document.querySelector(".expandable-container"));
 
 //* The below statement will change the svg based on the class name in the main tag
 if (mainContent.classList.contains("daytime-bg")) {
@@ -13,16 +13,16 @@ if (mainContent.classList.contains("daytime-bg")) {
     timeOfDay.innerHTML = `<svg width="23" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.157 17.366a.802.802 0 00-.891-.248 8.463 8.463 0 01-2.866.482c-4.853 0-8.8-3.949-8.8-8.8a8.773 8.773 0 013.856-7.274.801.801 0 00-.334-1.454A7.766 7.766 0 0012 0C5.382 0 0 5.382 0 12s5.382 12 12 12c4.2 0 8.02-2.134 10.218-5.709a.805.805 0 00-.061-.925z" fill="#FFF" fill-rule="nonzero"/></svg>`;
 }
 
-btn.addEventListener("click", () => {
-    if (btnFirstChild.innerHTML === "more") {
-        btnFirstChild.innerHTML = "less";
-        btnIcon.style.transform = "rotate(0deg)";
-        expandableContainer.style.display = "flex";
-        window.scrollTo(0, expandableContainer.scrollHeight);
-    } else {
-        btnFirstChild.innerHTML = "more";
-        btnIcon.style.transform = "rotate(180deg)";
-        window.scrollTo(0, 0);
-        setTimeout("expandableContainer.style.display = 'none'", 500);
-    }
-});
+// btn.addEventListener("click", () => {
+//     if (btnFirstChild.innerHTML === "more") {
+//         btnFirstChild.innerHTML = "less";
+//         btnIcon.style.transform = "rotate(0deg)";
+//         expandableContainer.style.display = "flex";
+//         window.scrollTo(0, expandableContainer.scrollHeight);
+//     } else {
+//         btnFirstChild.innerHTML = "more";
+//         btnIcon.style.transform = "rotate(180deg)";
+//         window.scrollTo(0, 0);
+//         setTimeout("expandableContainer.style.display = 'none'", 500);
+//     }
+// });
