@@ -3,15 +3,19 @@
 //* This is where the layout/styling for the main content is housed *
 main {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     color: colorSet(light-clr, white);
     padding-top: 40px;
     @include fluidType(padding-left, 320px, 1400px, 10px, 80px);
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
+
+    @media screen and (min-width: 500px) {
+        height: 100vh;
+    }
 
     & .programmingQuotes {
         width: auto;
@@ -38,6 +42,11 @@ main {
     }
 
     & .flex-container {
+        height: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
         & .time-container {
             & .welcome-section {
                 display: flex;
