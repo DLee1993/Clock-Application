@@ -49,13 +49,13 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                & .tablet-only{
-                    display: none;
+                // & .tablet-only{
+                //     display: none;
 
-                    @media screen and (min-width: 500px) {
-                        display: inline-block;
-                    }
-                }
+                //     @media screen and (min-width: 500px) {
+                //         display: inline-block;
+                //     }
+                // }
             }
         }
         & .time-display{
