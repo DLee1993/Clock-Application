@@ -5,11 +5,12 @@ main {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
     color: colorSet(light-clr, white);
     padding-top: 60px;
+    padding-bottom: 60px;
     @include fluidType(padding-left, 320px, 1400px, 10px, 80px);
     @include fluidType(padding-right, 320px, 1400px, 10px, 50px);
 
@@ -37,39 +38,43 @@ main {
         }
     }
 
-    & .time-container{
-        & .welcome-section{
-            width: fit-content;
-            display: flex;
-
-            & .timeOfDayIcon{
+    & .flex-container {
+        height: 250px;
+        background-color: red;
+        & .time-container {
+            & .welcome-section {
+                width: fit-content;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-            }
 
-            & .welcomeText{
-                margin-left: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                & .timeOfDayIcon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
-                & .tablet-only{
-                    display: none;
+                & .welcomeText {
+                    margin-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    @media screen and (min-width: 350px) {
-                        display: flex;
+                    & .tablet-only {
+                        display: none;
+
+                        @media screen and (min-width: 350px) {
+                            display: flex;
+                        }
                     }
                 }
             }
-        }
-        & .time-display{
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-end;
+            & .time-display {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
 
-            & .timezone{
-                text-transform: uppercase;
+                & .timezone {
+                    text-transform: uppercase;
+                }
             }
         }
     }

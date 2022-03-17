@@ -254,9 +254,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -266,6 +266,7 @@ main {
           flex-direction: column;
   color: #ffffff;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 main {
@@ -330,7 +331,12 @@ main .programmingQuotes .quote-author {
   font-weight: 700;
 }
 
-main .time-container .welcome-section {
+main .flex-container {
+  height: 250px;
+  background-color: red;
+}
+
+main .flex-container .time-container .welcome-section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -339,7 +345,7 @@ main .time-container .welcome-section {
   display: flex;
 }
 
-main .time-container .welcome-section .timeOfDayIcon {
+main .flex-container .time-container .welcome-section .timeOfDayIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,7 +357,7 @@ main .time-container .welcome-section .timeOfDayIcon {
           align-items: center;
 }
 
-main .time-container .welcome-section .welcomeText {
+main .flex-container .time-container .welcome-section .welcomeText {
   margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,19 +370,19 @@ main .time-container .welcome-section .welcomeText {
           align-items: center;
 }
 
-main .time-container .welcome-section .welcomeText .tablet-only {
+main .flex-container .time-container .welcome-section .welcomeText .tablet-only {
   display: none;
 }
 
 @media screen and (min-width: 350px) {
-  main .time-container .welcome-section .welcomeText .tablet-only {
+  main .flex-container .time-container .welcome-section .welcomeText .tablet-only {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-main .time-container .time-display {
+main .flex-container .time-container .time-display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,7 +394,7 @@ main .time-container .time-display {
           align-items: flex-end;
 }
 
-main .time-container .time-display .timezone {
+main .flex-container .time-container .time-display .timezone {
   text-transform: uppercase;
 }
 
