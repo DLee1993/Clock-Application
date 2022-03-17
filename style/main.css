@@ -351,6 +351,18 @@ main .time-container .welcome-section .welcomeText {
           align-items: center;
 }
 
+main .time-container .welcome-section .welcomeText .tablet-only {
+  display: none;
+}
+
+@media screen and (min-width: 350px) {
+  main .time-container .welcome-section .welcomeText .tablet-only {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 main .time-container .time-display {
   display: -webkit-box;
   display: -ms-flexbox;
