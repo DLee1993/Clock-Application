@@ -248,6 +248,24 @@ h5 {
   background-position: center;
 }
 
+.expandable-cont-day {
+  background-color: #bbbbbb;
+  color: #000000;
+}
+
+.expandable-cont-day .timezone-location {
+  border-right: 1px solid black;
+}
+
+.expandable-cont-night {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.expandable-cont-night .timezone-location {
+  border-right: 1px solid #979797;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -445,14 +463,25 @@ main .flex-container .location-expandable {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  background-color: #bbbbbb;
 }
 
-.expandable-container .location_dayOfYear {
-  width: 50%;
-  height: 80%;
+@media screen and (min-width: 700px) {
+  .expandable-container {
+    height: 35vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.expandable-container .timezone-location, .expandable-container .location-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,15 +494,38 @@ main .flex-container .location-expandable {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-right: 1px solid black;
+  width: 100%;
+  height: 50%;
 }
 
-.expandable-container .location_dayOfYear .expandable_location {
-  width: 300px;
+@media screen and (min-width: 700px) {
+  .expandable-container .timezone-location, .expandable-container .location-info {
+    height: 80%;
+    width: 50%;
+  }
 }
 
-.expandable-container .location_dayOfYear .dayOfTheYear {
-  width: 300px;
+.expandable-container .timezone-location .timezone-container, .expandable-container .timezone-location .dayOfYear-container, .expandable-container .timezone-location .dayOfWeek-container, .expandable-container .timezone-location .weekNumber-container, .expandable-container .location-info .timezone-container, .expandable-container .location-info .dayOfYear-container, .expandable-container .location-info .dayOfWeek-container, .expandable-container .location-info .weekNumber-container {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expandable-container .timezone-location .timezone-container p, .expandable-container .timezone-location .dayOfYear-container p, .expandable-container .timezone-location .dayOfWeek-container p, .expandable-container .timezone-location .weekNumber-container p, .expandable-container .location-info .timezone-container p, .expandable-container .location-info .dayOfYear-container p, .expandable-container .location-info .dayOfWeek-container p, .expandable-container .location-info .weekNumber-container p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.expandable-container .timezone-location .timezone-container h4, .expandable-container .timezone-location .dayOfYear-container h4, .expandable-container .timezone-location .dayOfWeek-container h4, .expandable-container .timezone-location .weekNumber-container h4, .expandable-container .location-info .timezone-container h4, .expandable-container .location-info .dayOfYear-container h4, .expandable-container .location-info .dayOfWeek-container h4, .expandable-container .location-info .weekNumber-container h4 {
+  font-weight: 700;
 }
 
 .btn-styling {

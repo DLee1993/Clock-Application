@@ -14,3 +14,22 @@
     background-size: cover;
     background-position: center;
 }
+
+
+.expandable-cont-day{
+    background-color: colorSet(dark-clr, light-grey);
+    color: colorSet(dark-clr, black);
+
+    .timezone-location{
+        border-right: 1px solid black;
+    }
+}
+
+.expandable-cont-night{
+    background-color: colorSet(dark-clr, black);
+    color: colorSet(light-clr, white);
+
+    .timezone-location{
+        border-right: 1px solid #979797;
+    }
+}
