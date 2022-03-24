@@ -16,16 +16,17 @@ main {
 
     & .programmingQuotes {
         width: auto;
-        max-width: 572px;
+        max-width: 600px;
 
         & .quote-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
+            height: 100px;   
 
             & .quoteText {
-                width: 80%;
+                width: 90%;
             }
 
             & svg:hover {
@@ -41,6 +42,7 @@ main {
     & .flex-container {
         width: 90%;
         height: 250px;
+        margin-top: 50px;
         & .time-container {
             margin-bottom: 10px;
             & .welcome-section {

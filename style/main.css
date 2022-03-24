@@ -321,7 +321,7 @@ main {
 
 main .programmingQuotes {
   width: auto;
-  max-width: 572px;
+  max-width: 600px;
 }
 
 main .programmingQuotes .quote-container {
@@ -335,10 +335,11 @@ main .programmingQuotes .quote-container {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 10px;
+  height: 100px;
 }
 
 main .programmingQuotes .quote-container .quoteText {
-  width: 80%;
+  width: 90%;
 }
 
 main .programmingQuotes .quote-container svg:hover {
@@ -352,6 +353,7 @@ main .programmingQuotes .quote-author {
 main .flex-container {
   width: 90%;
   height: 250px;
+  margin-top: 50px;
 }
 
 main .flex-container .time-container {
