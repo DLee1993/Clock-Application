@@ -4,7 +4,10 @@ const refreshIcon = document.querySelector(".refreshIcon"),
     btn = document.querySelector(".toggle-expandable"),
     btnFirstChild = btn.querySelector(".btn-text"),
     btnIcon = btn.querySelector("svg"),
-    expandableContainer = document.querySelector(".expandable-container");
+    expandableContainer = document.querySelector(".expandable-container"),
+    quoteText = document.querySelector('.quoteText'),
+    author = document.querySelector('.quote-author'),
+    randomQuoteURL = 'https://programming-quotes-api.herokuapp.com/Quotes/random?maxLength=100';
 
 //* The below statement will change the svg based on the class name in the main tag
 if (mainContent.classList.contains("daytime-bg")) {
@@ -28,3 +31,23 @@ btn.addEventListener("click", () => {
         setTimeout("expandableContainer.style.display = 'none'", 500);
     }
 });
+
+
+refreshIcon.addEventListener('click', () => {
+    renderNewQuote();
+})
+
+// //* Get a random quote and pass it to the quoteText element
+function getRandomQuote() {
+    return fetch(randomQuoteURL)
+        .then((response) => response.json())
+        .then((data) => data);
+}
+
+async function renderNewQuote() {
+    const quote = await getRandomQuote();
+    quoteText.innerHTML = quote.en;
+    author.innerHTML = quote.author;
+}
+
+renderNewQuote();
