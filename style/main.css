@@ -49,13 +49,13 @@ h1 {
 
 @media screen and (min-width: 320px) {
   h1 {
-    font-size: calc(11.16071vw + 64.28571px);
+    font-size: calc(8.92857vw + 71.42857px);
   }
 }
 
 @media screen and (min-width: 2560px) {
   h1 {
-    font-size: 350px;
+    font-size: 300px;
   }
 }
 

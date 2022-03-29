@@ -8,7 +8,14 @@ const refreshIcon = document.querySelector(".refreshIcon"),
     quoteText = document.querySelector('.quoteText'),
     author = document.querySelector('.quote-author'),
     welcomeText = document.querySelector('.greeting'),
-    randomQuoteURL = 'https://programming-quotes-api.herokuapp.com/Quotes/random';
+    timeDisplay = document.querySelector('.time-display .time'),
+    timezoneDisplay = document.querySelector('.time-display .timezone'),
+    timeZoneLocation = document.querySelector(".timezone-container .location"),
+    dayOfYearContainer = document.querySelector('.dayOfYear-container .number'),
+    dayOfWeekContainer = document.querySelector('.dayOfWeek-container .number'),
+    weekOfYearContainer = document.querySelector('.weekNumber-container .number'),
+    randomQuoteURL = 'https://programming-quotes-api.herokuapp.com/Quotes/random',
+    wordTimeURL = "https://worldtimeapi.org/api/ip"; 
 
 //* The below statement will change the svg based on the class name in the main tag
 if (mainContent.classList.contains("daytime-bg")) {
@@ -53,6 +60,23 @@ async function renderNewQuote() {
     author.innerHTML = quote.author;
 }
 
-renderNewQuote();
+function getTime(){
+    return fetch(wordTimeURL)
+    .then((response) => response.json())
+    .then((data) => data);
+}
 
-console.log('The class of problems that are computable by a digital computer apparently includes every problem that is computable by any kind of device.'.length)
+async function renderTime(){
+    const apiInfo = await getTime(); 
+    const time = apiInfo.datetime.substring(11, 16)
+    timeDisplay.innerHTML = time;
+    timezoneDisplay.innerHTML = apiInfo.abbreviation;
+    timeZoneLocation.innerHTML = apiInfo.timezone;
+    dayOfYearContainer.innerHTML = apiInfo.day_of_year;
+    dayOfWeekContainer.innerHTML = apiInfo.day_of_week; 
+    weekOfYearContainer.innerHTML = apiInfo.week_number;
+
+}
+
+renderNewQuote();
+renderTime();
