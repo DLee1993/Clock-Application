@@ -13,8 +13,11 @@ const refreshIcon = document.querySelector(".refreshIcon"),
     timeZoneLocation = document.querySelector(".timezone-container .location"),
     dayOfYearContainer = document.querySelector('.dayOfYear-container .number'),
     dayOfWeekContainer = document.querySelector('.dayOfWeek-container .number'),
+    cityLocationContainer = document.querySelector('.city'),
+    countryLocationContainer = document.querySelector('.country'),
     weekOfYearContainer = document.querySelector('.weekNumber-container .number'),
     randomQuoteURL = 'https://programming-quotes-api.herokuapp.com/Quotes/random',
+    cityLocationAPI = 'https://ipapi.co/json/',
     wordTimeURL = "https://worldtimeapi.org/api/ip"; 
 
 //* The below statement will change the svg based on the class name in the main tag
@@ -78,5 +81,21 @@ async function renderTime(){
 
 }
 
+function getLocation(){
+    return fetch(cityLocationAPI)
+    .then((response) => response.json())
+    .then((data) => data)
+}
+
+async function renderCityLocation(){
+    const locationAPI = await getLocation(); 
+    if(locationAPI.country_code === 'GB'){
+        locationAPI.country_code = 'UK'
+    }
+    cityLocationContainer.innerHTML = locationAPI.country_capital + ',';
+    countryLocationContainer.innerHTML = locationAPI.country_code;
+}
+
 renderNewQuote();
 renderTime();
+renderCityLocation();
